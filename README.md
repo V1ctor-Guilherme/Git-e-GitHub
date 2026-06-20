@@ -134,3 +134,28 @@ git commit -m "Sua mensagem" #Salva localmente
 
 git push #Envia para a nuvem
 ```
+
+## Cheatsheet: Resumo de Comandos Essenciais
+
+Para facilitar a consulta no dia a dia, aqui está um resumo rápido dos comandos mais utilizados na rotina de desenvolvimento:
+
+| Comando | O que faz na prática? |
+| :--- | :--- |
+| `git init` | Inicia um novo repositório Git na pasta atual. |
+| `git status` | Exibe o estado atual dos arquivos (o que está modificado, o que está na *Staging Area*, etc.). |
+| `git log` | Mostra o histórico de *commits* do projeto (quem fez, quando, e a mensagem). |
+| `git add .` | Adiciona todas as modificações atuais à *Staging Area*. |
+| `git commit -m "msg"` | Grava as alterações preparadas no histórico local com uma mensagem. |
+| `git clone [url]` | Baixa um repositório remoto inteiro para a sua máquina local. |
+| `git push` | Envia os *commits* salvos localmente para o repositório remoto (ex: GitHub). |
+| `git pull` | Baixa atualizações do repositório remoto e já tenta mesclá-las com o seu código local. |
+
+---
+
+## Próximos Passos de Estudo
+
+Com os fundamentos bem consolidados, a evolução natural do aprendizado envolve dominar recursos de trabalho em equipe e organização do repositório:
+
+* **Branches (Ramificações):** Como criar linhas do tempo isoladas (`git branch`), navegar entre elas (`git checkout` ou `git switch`) e unir o trabalho depois (`git merge`).
+* **Resolução de Conflitos:** Como agir quando o Git avisa que duas pessoas alteraram a mesma linha de código.
+* **Arquivo `.gitignore`:** Como configurar o Git para ignorar automaticamente arquivos sensíveis (como senhas) ou pesados (como pastas de dependências locais).
