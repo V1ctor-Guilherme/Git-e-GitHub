@@ -38,7 +38,7 @@ O **Git** é o sistema de controle de versão mais utilizado no mundo, criado em
 
 ---
 
-### 1. Como funciona a Arquitetura do Git?
+### Como funciona a Arquitetura do Git?
 
 Para dominar o Git, é essencial entender que ele não salva os arquivos de uma vez só. Ele gerencia as alterações transitando os arquivos entre três estados (ou áreas) principais:
 
@@ -52,4 +52,32 @@ Para dominar o Git, é essencial entender que ele não salva os arquivos de uma 
 1. Arquivos são modificados no **Working Directory**.
 2. As mudanças desejadas são adicionadas à **Staging Area** (preparadas).
 3. O pacote de mudanças na Staging Area é confirmado e gravado de forma permanente no **Repository**.
+
+## GitHub
+
+Enquanto o Git é o "motor" que roda no seu próprio computador, o **GitHub** é uma plataforma baseada na nuvem projetada para hospedar repositórios Git. Ele adiciona uma camada de interface gráfica e ferramentas avançadas de colaboração em cima do controle de versão padrão.
+
+**Qual a diferença fundamental?**
+Git é a ferramenta (o sistema). GitHub é o serviço na web. Para fazer uma analogia: o Git seria como o programa de edição de texto no seu computador, enquanto o GitHub seria o Google Drive onde você salva, compartilha e edita esse texto em conjunto com outras pessoas.
+
+**Principais funções:**
+* **Hospedagem e Backup (Cloud):** Mantém cópias do seu código seguras em servidores remotos, protegendo contra perdas locais.
+* **Colaboração Aberta e Fechada:** Permite que equipes inteiras, em qualquer lugar do mundo, trabalhem no mesmo código de forma simultânea e organizada.
+* **Portfólio Profissional:** Funciona como um currículo vivo e público. É o principal local onde recrutadores avaliam as habilidades técnicas e o histórico de projetos de pessoas da área de tecnologia.
+
+---
+
+### Como funciona a dinâmica do GitHub?
+
+O ecossistema do GitHub funciona baseando-se na sincronização entre o seu repositório local (sua máquina) e um repositório remoto (na nuvem). 
+
+Para que essa comunicação e fluxo de trabalho aconteçam, é necessário entender os conceitos de rede do Git:
+
+| Conceito / Ação | O que significa na prática? |
+| :--- | :--- |
+| **Remote** | É a ponte de conexão. O repositório na nuvem geralmente recebe o apelido padrão de `origin` no seu terminal local. |
+| **Clone** (`git clone`) | Ação de fazer o download de um repositório inteiro (que já existe no GitHub) para a sua máquina local pela primeira vez. |
+| **Push** (`git push`) | Ação de "empurrar". Envia os seus *commits* (histórico salvo) da sua máquina para o repositório remoto no GitHub. É o seu "upload". |
+| **Pull** (`git pull`) | Ação de "puxar". Baixa atualizações do GitHub para o seu ambiente local. Usado para sincronizar sua máquina com alterações feitas por outras pessoas da equipe. |
+| **Pull Request (PR)** | É o recurso colaborativo mais importante do GitHub. Trata-se de um pedido formal para que sua equipe revise o código novo antes de integrá-lo definitivamente à versão oficial e principal do projeto. |
 
