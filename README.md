@@ -81,3 +81,56 @@ Para que essa comunicação e fluxo de trabalho aconteçam, é necessário enten
 | **Pull** (`git pull`) | Ação de "puxar". Baixa atualizações do GitHub para o seu ambiente local. Usado para sincronizar sua máquina com alterações feitas por outras pessoas da equipe. |
 | **Pull Request (PR)** | É o recurso colaborativo mais importante do GitHub. Trata-se de um pedido formal para que sua equipe revise o código novo antes de integrá-lo definitivamente à versão oficial e principal do projeto. |
 
+
+## Mão na Massa (Guia Prático)
+
+Aqui está o fluxo de trabalho passo a passo para iniciar um repositório do zero, versionar arquivos e enviá-los para o GitHub.
+
+### Passo 1: Configuração Inicial e Criação (Local)
+No terminal, navegue até a pasta do seu projeto e execute:
+
+```bash
+# Inicia um novo repositório Git na pasta atual (cria a pasta oculta .git)
+git init
+
+# Verifica o status atual dos arquivos (o que foi alterado, criado, etc.)
+git status
+```
+### Passo 2: Preparando e Salvando (Local)
+Após modificar ou criar novos arquivos, registre as alterações no histórico do Git passando pela Staging Area:
+
+```bash 
+# Adiciona todos os arquivos modificados e novos na Staging Area
+git add .
+
+# (Alternativa) Adiciona apenas um arquivo específico
+git add nome-do-arquivo.txt
+
+# Salva as alterações no histórico (Repository) com uma mensagem descritiva
+git commit -m "Adiciona a estrutura inicial do projeto"
+```
+
+### Passo 3: Conectando com o GitHub e Enviando (Remoto)
+Vá até o GitHub, crie um novo repositório vazio (sem README ou .gitignore) e copie a URL fornecida. Depois, volte ao terminal para conectar seu projeto local à nuvem:
+
+```Bash
+# Garante que a branch principal tenha o nome padrão 'main'
+git branch -M main
+
+# Conecta o seu repositório local ao endereço do GitHub (criando o vínculo 'origin')
+git remote add origin https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
+
+# Envia o seu código para o GitHub (Push) e vincula a branch local à remota (-u)
+git push -u origin main
+```
+
+### Resumo do Fluxo Diário
+Depois que o repositório já está configurado e conectado ao GitHub (Passos 1 e 3 já foram feitos uma vez), o ciclo de trabalho do dia a dia se resume a três comandos simples:
+
+```Bash
+git add . #Prepara
+
+git commit -m "Sua mensagem" #Salva localmente
+
+git push #Envia para a nuvem
+```
